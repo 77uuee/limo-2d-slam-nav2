@@ -194,7 +194,7 @@ locate_help() {
   say "  ros2 topic echo /scan --qos-reliability best_effort --once --full-length > ~/scan.yaml"
   say ""
   say "  # 맥북에서"
-  say "  scp wego@192.168.0.96:~/scan.yaml ~/limo-lab/merge/"
+  say "  scp wego@<robot-ip>:~/scan.yaml ~/limo-lab/merge/"
   say "  cd ~/limo-lab/merge"
   say "  python3 scan_locate.py full_v7.yaml scan.yaml --xmin -4.5 --xmax 5.0 --ymin 0 --ymax 16"
   say ""
