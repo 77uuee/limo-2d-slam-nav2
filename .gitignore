@@ -1,0 +1,60 @@
+# This repository tracks the map-editing tools, the map versions that were
+# actually driven on, and the figures referenced by the README. Everything
+# else in the working directory is intermediate output from a debugging
+# session and is excluded by the allowlist below.
+
+# --- exclude everything by default ---
+*
+!*/
+
+# --- always keep ---
+!.gitignore
+!README.md
+!run_lab.sh
+
+# --- tools ---
+!merge/*.py
+
+# --- map versions referenced by the README ---
+# inputs to the merge
+!merge/room_v2.pgm
+!merge/room_v2.yaml
+!merge/hallway.pgm
+!merge/hallway.yaml
+# merged-map lineage
+!merge/merged.pgm
+!merge/merged.yaml
+!merge/merged.png
+!merge/merged_ramp2.pgm
+!merge/merged_ramp2.yaml
+!merge/merged_ramp2.png
+# single-session lineage (the maps actually used for navigation)
+!merge/full_20260812.pgm
+!merge/full_20260812.yaml
+!merge/full_v5.pgm
+!merge/full_v5.yaml
+!merge/full_v8.pgm
+!merge/full_v8.yaml
+!merge/full_v8.png
+!merge/full_v9.pgm
+!merge/full_v9.yaml
+!merge/full_v9.png
+
+# --- figures used in the README ---
+!merge/door_open_v8_v9.png
+!merge/door_plan.png
+!merge/overview_marked.png
+!merge/scan_20260811_match.png
+!merge/v8_diff.png
+
+# --- never track ---
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.claude/
+.env
+*.pem
+*.key
